@@ -11,15 +11,16 @@ function setCart(c) {
 
 function addToCart(item) {
 // write your code here
-var obj = {
-itemName: item,
-itemPrice: Math.floor(Math.random() * 100) + 1}
-cart.push(obj)
-return `${item} has been added to your cart.`
+
+
+
+function addToCart(name)
+{
+ var item={itemName: name, itemPrice: 1+Math.floor(Math.random()*99)};
+ cart.push(item);
+ console.log(`${itemName} has been added to your cart.`);
+ return cart;
 }
-
-
-
 
 
 
@@ -32,7 +33,7 @@ for(var i = 0; i < cart.length; i++){
   if ( ! i<1 && i === cart.length - 1){
     arr.push(` and ${cart[i].itemName} at $${cart[i].itemPrice}`)
   }else{
-  arr.push(` ${cart[i].itemName} at $${cart[i].itemPrice}`)
+  arr.push(` ${cart[i]['itemName']} at $${cart[i].itemPrice}`)
 }
 }
 return `In your cart, you have${arr}.`
